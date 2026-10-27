@@ -181,6 +181,34 @@ footer .wrap{align-items:center;display:flex;flex-wrap:wrap;justify-content:spac
   .res,.res:nth-child(n+4){flex-basis:88%}
   nav{gap:18px}
 }
+
+/* ===== centrado ===== */
+.hero,h2,.sub,.dia,.precio-box,.plato,.nota,.bloque,.paquete,.res-head,.visita .grid2,.aviso{text-align:center}
+.hero .script{margin-left:0}
+.hero p.lead,.sub{margin-left:auto;margin-right:auto}
+.hero .acciones,.visita .acciones,.res-botones{justify-content:center}
+.dia ul,.bloque ul{list-style:none}
+.dia li{margin-left:0}
+.precio-box{flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.precio-box span{margin:0 auto}
+.res-head{flex-direction:column;justify-content:center;align-items:center}
+.res-nota{justify-content:center;text-align:left}
+.res{text-align:center}
+.res figcaption{align-items:center}
+.grid2{justify-items:center}
+.horarios{margin-left:auto;margin-right:auto;width:100%}
+.visita .grid2>div{width:100%}
+iframe{max-width:640px}
+footer .wrap{flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.pie-logo{justify-content:center}
+@media (max-width:760px){
+  header.top .wrap{justify-content:center}
+  nav{justify-content:safe center}
+  .hero .acciones,.visita .acciones{align-items:stretch}
+  .precio-box{align-items:center}
+  footer .wrap{align-items:center}
+  .res-lista{justify-content:flex-start}
+}
 </style>
 </head>
 <body>
