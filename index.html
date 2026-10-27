@@ -199,9 +199,11 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
 
   header.top .wrap{flex-direction:column;gap:4px;padding-top:8px;padding-bottom:0}
   .logo img{height:38px}
-  nav{width:calc(100% + 36px);margin:0 -18px;padding:0 18px;overflow-x:auto;gap:22px;justify-content:safe center;font-size:.92rem;scrollbar-width:none}
-  nav::-webkit-scrollbar{display:none}
-  nav a{white-space:nowrap;padding:10px 0 11px}
+  header.top .wrap{gap:0}
+  nav{width:100%;margin:0;padding:0;display:flex;justify-content:space-between;gap:0;overflow:visible;font-size:clamp(.7rem,3.4vw,.86rem)}
+  nav a{flex:none;white-space:nowrap;padding:12px 4px 11px;border-bottom:4px solid transparent;border-radius:2px;color:var(--gris);-webkit-tap-highlight-color:transparent}
+  nav a:hover{color:var(--gris)}
+  nav a.act{color:var(--verde-osc);border-bottom-color:var(--rosa)}
 
   .hero{padding:34px 0 86px;border-radius:0 0 32px 32px}
   .hero-grid{grid-template-columns:1fr;gap:28px}
@@ -244,7 +246,6 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
 }
 @media (max-width:380px){
   .res,.res:nth-child(n+4){flex-basis:90%}
-  nav{gap:18px}
 }
 </style>
 </head>
