@@ -85,6 +85,30 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:800;color:var(--verde);font-si
 .paquete b{font-family:Fraunces,Georgia,serif;font-size:1.8rem;color:var(--verde);display:block}
 .aviso{margin-top:22px;font-size:.95rem;color:#5d665f}
 
+
+/* reseñas */
+.resenas{background:var(--papel)}
+.res-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;margin-bottom:30px}
+.res-nota{display:flex;align-items:center;gap:16px}
+.res-nota .num{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:4rem;line-height:1;color:var(--verde)}
+.res-nota .estrellas{font-size:1.3rem;letter-spacing:2px;color:#e8a317;line-height:1}
+.res-nota small{display:block;color:#5d665f;font-size:.95rem;margin-top:4px}
+.res-lista{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.res{background:var(--crema);border:2px solid var(--verde);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:12px}
+.res:nth-child(even){border-color:var(--teja)}
+.res .estrellas{color:#e8a317;letter-spacing:2px;font-size:1.1rem;line-height:1}
+.res blockquote{flex:1}
+.res footer{background:none;color:inherit;padding:0;font-size:.95rem;display:block}
+.res footer b{display:block;font-family:Fraunces,Georgia,serif;font-size:1.05rem;color:var(--verde)}
+.res footer span{color:#5d665f;font-size:.88rem}
+.res-botones{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.res-botones .btn{border-color:var(--verde);color:var(--verde-osc)}
+.res-botones .btn:hover{background:var(--verde);color:var(--crema)}
+@media (max-width:760px){
+  .res-lista{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -22px;padding:0 22px 14px}
+  .res{flex:0 0 84%;scroll-snap-align:center}
+}
+
 /* visitá */
 .visita{background:var(--verde);color:var(--crema)}
 .visita h2{color:var(--crema)}
@@ -110,6 +134,7 @@ footer .wrap{align-items:center;display:flex;flex-wrap:wrap;justify-content:spac
       <a href="#almuerzo">Almuerzo</a>
       <a href="#domingo">Domingos</a>
       <a href="#carta">Carta</a>
+      <a href="#resenas">Reseñas</a>
       <a href="#visitanos">Cómo llegar</a>
     </nav>
   </div>
@@ -182,6 +207,31 @@ footer .wrap{align-items:center;display:flex;flex-wrap:wrap;justify-content:spac
         <div class="paquete"><b>$18.000</b><strong>Menú infantil</strong><p>Bebida, un plato a elección y una bocha de helado.</p></div>
       </div>
       <p class="aviso">Los precios de la carta pueden cambiar. Consultá en el local o por WhatsApp.</p>
+    </div>
+  </section>
+
+  <section id="resenas" class="resenas">
+    <div class="wrap">
+      <div class="res-head">
+        <div>
+          <h2>Lo que dicen de nosotros</h2>
+          <p class="sub" style="margin-bottom:0">Reseñas reales de quienes nos visitaron.</p>
+        </div>
+        <div class="res-nota">
+          <span class="num">4,9</span>
+          <div><div class="estrellas" role="img" aria-label="4,9 de 5 estrellas">★★★★★</div><small>103 reseñas en Google</small></div>
+        </div>
+      </div>
+      <div class="res-lista">
+        <figure class="res"><div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote><p>El sábado fui por primera vez con un grupo de amigos por la tarde y la realidad es que hace mucho que no me sentía tan a gusto en un lugar, nos atendieron increíble, la calidez humana y ambiente hogareño que tiene es hermoso, estábamos afuera y nos ofrecieron mantas para que no pasemos frío.. la merienda estaba increíble, todo muy casero y riquísimo.. sin lugar a dudas mi nuevo café favorito! Gracias a todo el personal</p></blockquote><footer><b>Isaias Meneguz</b><span>Local Guide · hace un mes</span></footer></figure>
+        <figure class="res"><div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote><p>Me encantó este café. Me pedí un Vanilla Coffee y un croissant, muy rico todo, es excelente el servicio, el lugar muy acogedor y con un ambiente muy familiar. Definitivamente recomiendo ir.</p></blockquote><footer><b>Juana Baez</b><span>Hace 3 meses</span></footer></figure>
+        <figure class="res"><div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote><p>Hermoso lugar en el barrio, el combo de avocado tous una delicia!! ✨✨ Ya sé dónde venir a desayunar/ merendar</p></blockquote><footer><b>Noemí Alvarez</b><span>Hace 3 meses</span></footer></figure>
+        <figure class="res"><div class="estrellas" role="img" aria-label="4 de 5 estrellas">★★★★☆</div><blockquote><p>Gran lugar para tomar una desayuno o merienda, el café es riquísimo y las opciones de pastelería también.</p></blockquote><footer><b>Andrea Sabatino</b><span>Local Guide · hace 3 semanas</span></footer></figure>
+        <figure class="res"><div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote><p>El mejor jugar para un buen desayuno y con costo bajo definitivamente volveré</p></blockquote><footer><b>Rufino Avalos</b><span>Local Guide · hace un mes</span></footer></figure>
+      </div>
+      <div class="res-botones">
+        <a class="btn borde" href="https://www.google.com/maps/search/?api=1&query=Acevedo+Cafet%C3%ADn+Miralla+215+Liniers+Buenos+Aires" target="_blank" rel="noopener">Ver todas las reseñas en Google</a>
+      </div>
     </div>
   </section>
 
